@@ -1,0 +1,9 @@
+# Sensible/echte Daten – NICHT ins Repo
+config.php
+data/
+data.json
+photos/
+*.log
+
+# System
+.DS_Store

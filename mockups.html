@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VanLog Blog — Design-Vorschläge</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #e8e4de; font-family: system-ui, sans-serif; }
+
+/* Separator between mockups */
+.mockup-divider {
+  text-align: center;
+  padding: 48px 24px 24px;
+  background: #e8e4de;
+}
+.mockup-divider h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #666;
+  margin-bottom: 6px;
+}
+.mockup-divider p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: #999;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   DESIGN 1: WARM SAND — Erdig-warmes Boho
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.d1 { background: #FAF6F1; color: #3D3229; }
+
+.d1 .hero {
+  padding: 48px 20px 32px;
+  background: linear-gradient(180deg, #F0E4D4 0%, #FAF6F1 100%);
+}
+.d1 .eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #C4704B;
+  margin-bottom: 10px;
+}
+.d1 .title {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #2D2418;
+  margin-bottom: 10px;
+}
+.d1 .title em { font-style: italic; color: #C4704B; }
+.d1 .subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #8A7E72;
+  line-height: 1.5;
+}
+.d1 .stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 24px;
+}
+.d1 .stat {
+  background: rgba(196,112,75,0.08);
+  border: 1px solid rgba(196,112,75,0.15);
+  border-radius: 12px;
+  padding: 14px 12px;
+}
+.d1 .stat-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #A0937E;
+  margin-bottom: 4px;
+}
+.d1 .stat-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #C4704B;
+}
+
+.d1 .map-placeholder {
+  height: 220px;
+  background: linear-gradient(135deg, #e8dfd2 0%, #d4cbbf 50%, #e0d7cb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  color: #a89c8e;
+  font-size: 13px;
+  position: relative;
+  overflow: hidden;
+}
+.d1 .map-placeholder::before {
+  content: '';
+  position: absolute;
+  width: 280px; height: 180px;
+  border: 2px dashed rgba(196,112,75,0.3);
+  border-radius: 50% 60% 50% 40%;
+  transform: rotate(-8deg);
+}
+
+.d1 .timeline { padding: 24px 20px 40px; }
+.d1 .timeline-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #2D2418;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(196,112,75,0.2);
+}
+
+.d1 .station {
+  margin-bottom: 24px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 16px rgba(61,50,41,0.06);
+}
+.d1 .station-img {
+  height: 180px;
+  background: linear-gradient(135deg, #d4c4a8, #c8b090);
+  position: relative;
+}
+.d1 .station-img .date-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #C4704B;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+.d1 .station-img .flag-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 24px;
+}
+.d1 .station-img .img-text {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.6);
+}
+.d1 .station-body { padding: 18px; }
+.d1 .station-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2D2418;
+  margin-bottom: 2px;
+}
+.d1 .station-country {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px;
+  color: #A0937E;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+.d1 .station-note {
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  color: #5A4E42;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.d1 .station-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.d1 .tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(107,127,94,0.12);
+  color: #6B7F5E;
+  font-weight: 500;
+}
+.d1 .tag.fuel {
+  background: rgba(196,112,75,0.12);
+  color: #C4704B;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   DESIGN 2: CLOUD DANCER — Modern Clean
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.d2 { background: #F5F0EB; color: #2D2D2D; }
+
+.d2 .hero {
+  padding: 48px 20px 32px;
+  background: #F5F0EB;
+}
+.d2 .eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #E8A838;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.d2 .eyebrow::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #E8A838;
+}
+.d2 .title {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #1A1A1A;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+}
+.d2 .subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: #888;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.d2 .stats {
+  display: flex;
+  gap: 0;
+  margin-top: 28px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.d2 .stat {
+  flex: 1;
+  padding: 18px 0;
+  text-align: center;
+  border-right: 1px solid rgba(0,0,0,0.06);
+}
+.d2 .stat:last-child { border-right: none; }
+.d2 .stat-val {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #1A1A1A;
+  letter-spacing: -0.5px;
+}
+.d2 .stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #aaa;
+  margin-top: 2px;
+}
+
+.d2 .map-placeholder {
+  height: 200px;
+  background: #e8e3dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  color: #b0a898;
+  font-size: 13px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.d2 .timeline { padding: 28px 20px 40px; }
+.d2 .timeline-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.d2 .station {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.d2 .station-img {
+  height: 110px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ddd5c8, #ccc4b4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+.d2 .station-body { display: flex; flex-direction: column; justify-content: center; }
+.d2 .station-meta {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+.d2 .station-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 6px;
+}
+.d2 .station-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+.d2 .station-stat {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #E8A838;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════
+   DESIGN 3: SUNSET JOURNAL — Warmer Boho-Mix
+   ═══════════════════════════════════════════════════════════════════════════════ */
+.d3 { background: #FBF7F0; color: #3D3229; }
+
+.d3 .hero {
+  padding: 48px 20px 32px;
+  background: linear-gradient(180deg, #F5E6D3 0%, #FBF7F0 100%);
+}
+.d3 .eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: #D4845A;
+  margin-bottom: 6px;
+}
+.d3 .title {
+  font-family: 'Lora', serif;
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #2D2418;
+  margin-bottom: 8px;
+}
+.d3 .title strong { font-weight: 600; }
+.d3 .subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #9E8E7E;
+  line-height: 1.5;
+}
+
+.d3 .stats-banner {
+  margin: 24px 0 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #F0DCC8, #E8CCAE);
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+.d3 .stat-val {
+  font-family: 'Caveat', cursive;
+  font-size: 32px;
+  font-weight: 600;
+  color: #3D3229;
+  line-height: 1;
+}
+.d3 .stat-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8A7560;
+  margin-top: 4px;
+}
+
+.d3 .map-placeholder {
+  height: 220px;
+  background: linear-gradient(135deg, #e8dfd2, #f0e8db);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'DM Sans', sans-serif;
+  color: #b8a898;
+  font-size: 13px;
+  border-top: 1px solid rgba(196,132,90,0.15);
+  border-bottom: 1px solid rgba(196,132,90,0.15);
+  position: relative;
+  overflow: hidden;
+}
+.d3 .map-placeholder::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 3px;
+  background: #D4845A;
+  opacity: 0.4;
+  transform: rotate(-5deg);
+  border-radius: 2px;
+}
+
+.d3 .timeline {
+  padding: 28px 20px 40px;
+  position: relative;
+}
+.d3 .timeline::before {
+  content: '';
+  position: absolute;
+  left: 35px;
+  top: 72px;
+  bottom: 60px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(212,132,90,0.3), rgba(212,132,90,0.05));
+}
+.d3 .timeline-title {
+  font-family: 'Lora', serif;
+  font-size: 22px;
+  color: #2D2418;
+  margin-bottom: 24px;
+}
+
+.d3 .station {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 16px;
+  margin-bottom: 28px;
+  position: relative;
+}
+.d3 .station-date {
+  text-align: center;
+  z-index: 1;
+}
+.d3 .station-day {
+  font-family: 'Lora', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #3D3229;
+  line-height: 1;
+  background: #FBF7F0;
+  padding: 4px 0;
+}
+.d3 .station-month {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #A0937E;
+}
+.d3 .station-flag {
+  font-size: 20px;
+  margin-top: 6px;
+  background: #FBF7F0;
+  padding: 2px 0;
+}
+.d3 .station-body {}
+.d3 .station-name {
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2D2418;
+  margin-bottom: 2px;
+}
+.d3 .station-country-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  color: #A0937E;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+.d3 .station-note {
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  color: #5A4E42;
+  line-height: 1.65;
+  margin-bottom: 12px;
+}
+.d3 .station-img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.d3 .station-thumb {
+  height: 100px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e0d4c4, #d0c4b0);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 6px;
+}
+.d3 .station-thumb span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10px;
+  color: rgba(255,255,255,0.5);
+}
+.d3 .station-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.d3 .tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.d3 .tag.km {
+  background: rgba(143,164,126,0.15);
+  color: #6B7F5E;
+}
+.d3 .tag.fuel {
+  background: rgba(212,132,90,0.15);
+  color: #C4704B;
+}
+.d3 .tag.oil {
+  background: rgba(61,50,41,0.08);
+  color: #8A7E72;
+}
+
+.d3 .footer {
+  text-align: center;
+  padding: 24px 20px;
+  border-top: 1px solid rgba(212,132,90,0.15);
+  font-family: 'Caveat', cursive;
+  font-size: 16px;
+  color: #B8A898;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ DESIGN 1: WARM SAND ═══════════════ -->
+<div class="mockup-divider">
+  <h2>Vorschlag 1</h2>
+  <p>„Warm Sand" — Erdig-warmes Boho</p>
+</div>
+
+<div class="d1">
+  <div class="hero">
+    <div class="eyebrow">🚐 Mit Groeni Richtung Balkan</div>
+    <div class="title">Dirk &amp; Lisas<br><em>Reisetagebuch</em></div>
+    <div class="subtitle">Unser roter VW T3 Westfalia Joker, eine Straße nach Süden, und alles was unterwegs passiert.</div>
+    <div class="stats">
+      <div class="stat"><div class="stat-label">Tage</div><div class="stat-val">12</div></div>
+      <div class="stat"><div class="stat-label">Kilometer</div><div class="stat-val">2.841</div></div>
+      <div class="stat"><div class="stat-label">Länder</div><div class="stat-val">5</div></div>
+      <div class="stat"><div class="stat-label">Etappen</div><div class="stat-val">8</div></div>
+    </div>
+  </div>
+
+  <div class="map-placeholder">Karte · helle warme Tiles</div>
+
+  <div class="timeline">
+    <div class="timeline-title">Etappen</div>
+
+    <div class="station">
+      <div class="station-img" style="background: linear-gradient(135deg, #c8a882, #b89878);">
+        <div class="date-badge">20. Juni</div>
+        <div class="flag-badge">🇭🇷</div>
+        <div class="img-text">Foto · Dubrovnik</div>
+      </div>
+      <div class="station-body">
+        <div class="station-name">Dubrovnik</div>
+        <div class="station-country">Kroatien · 20. Juni 2026</div>
+        <div class="station-note">Die Altstadt bei Nacht ist magisch. Wir haben den ganzen Tag auf der Stadtmauer verbracht und den Sonnenuntergang über der Adria genossen.</div>
+        <div class="station-tags">
+          <span class="tag">680 km zur Etappe</span>
+          <span class="tag fuel">⛽ 55 L getankt</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="station">
+      <div class="station-img" style="background: linear-gradient(135deg, #a8b898, #90a880);">
+        <div class="date-badge">17. Juni</div>
+        <div class="flag-badge">🇸🇮</div>
+        <div class="img-text">Foto · Ljubljana</div>
+      </div>
+      <div class="station-body">
+        <div class="station-name">Ljubljana</div>
+        <div class="station-country">Slowenien · 17. Juni 2026</div>
+        <div class="station-note">Erste Nacht im Ausland. Slowenien ist grün und ruhig, die Drachenbrücke beeindruckt.</div>
+        <div class="station-tags">
+          <span class="tag">850 km zur Etappe</span>
+          <span class="tag fuel">⛽ 68 L getankt</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ DESIGN 2: CLOUD DANCER ═══════════════ -->
+<div class="mockup-divider">
+  <h2>Vorschlag 2</h2>
+  <p>„Cloud Dancer" — Modern Clean</p>
+</div>
+
+<div class="d2">
+  <div class="hero">
+    <div class="eyebrow">Balkan Roadtrip 2026</div>
+    <div class="title">Dirk & Lisa<br>unterwegs.</div>
+    <div class="subtitle">Hamburg → Athen im roten VW T3 Westfalia. Etappen, Bilder, das ganze Abenteuer.</div>
+    <div class="stats">
+      <div class="stat"><div class="stat-val">12</div><div class="stat-label">Tage</div></div>
+      <div class="stat"><div class="stat-val">2.841</div><div class="stat-label">km</div></div>
+      <div class="stat"><div class="stat-val">5</div><div class="stat-label">Länder</div></div>
+      <div class="stat"><div class="stat-val">8</div><div class="stat-label">Etappen</div></div>
+    </div>
+  </div>
+
+  <div class="map-placeholder">Karte · dezente helle Tiles</div>
+
+  <div class="timeline">
+    <div class="timeline-title">Etappen</div>
+
+    <div class="station">
+      <div class="station-img" style="background: linear-gradient(135deg, #d8cfc2, #c8bfb0);">🇭🇷</div>
+      <div class="station-body">
+        <div class="station-meta">20. Juni · Kroatien</div>
+        <div class="station-name">Dubrovnik</div>
+        <div class="station-note">Die Altstadt bei Nacht ist magisch. Den ganzen Tag auf der Stadtmauer verbracht.</div>
+        <div class="station-stat">680 km · 55 L getankt · 10.2 L/100</div>
+      </div>
+    </div>
+
+    <div class="station">
+      <div class="station-img" style="background: linear-gradient(135deg, #c8d4c0, #b8c8ae);">🇸🇮</div>
+      <div class="station-body">
+        <div class="station-meta">17. Juni · Slowenien</div>
+        <div class="station-name">Ljubljana</div>
+        <div class="station-note">Erste Nacht im Ausland. Slowenien ist grün und ruhig, die Drachenbrücke beeindruckt.</div>
+        <div class="station-stat">850 km · 68 L getankt · 11.3 L/100</div>
+      </div>
+    </div>
+
+    <div class="station">
+      <div class="station-img" style="background: linear-gradient(135deg, #d4d0c8, #c4c0b4);">🇩🇪</div>
+      <div class="station-body">
+        <div class="station-meta">15. Juni · Deutschland</div>
+        <div class="station-name">Hamburg</div>
+        <div class="station-note">Losgefahren bei Sonnenaufgang. Der Bulli schnurrt.</div>
+        <div class="station-stat">Startpunkt</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ DESIGN 3: SUNSET JOURNAL ═══════════════ -->
+<div class="mockup-divider">
+  <h2>Vorschlag 3</h2>
+  <p>„Sunset Journal" — Warmer Boho-Mix</p>
+</div>
+
+<div class="d3">
+  <div class="hero">
+    <div class="eyebrow">✦ mit Groeni Richtung Balkan</div>
+    <div class="title"><strong>Dirk &amp; Lisa</strong> unterwegs — von Hamburg bis Athen.</div>
+    <div class="subtitle">Reisetagebuch unseres roten VW T3 Westfalia Joker. Karte, Etappen, Bilder — alles was unterwegs entsteht.</div>
+
+    <div class="stats-banner">
+      <div><div class="stat-val">12</div><div class="stat-label">Tage</div></div>
+      <div><div class="stat-val">2.841</div><div class="stat-label">km</div></div>
+      <div><div class="stat-val">5</div><div class="stat-label">Länder</div></div>
+      <div><div class="stat-val">8</div><div class="stat-label">Etappen</div></div>
+    </div>
+  </div>
+
+  <div class="map-placeholder">Karte · warme Watercolor-Tiles</div>
+
+  <div class="timeline">
+    <div class="timeline-title">Etappen</div>
+
+    <div class="station">
+      <div class="station-date">
+        <div class="station-day">20</div>
+        <div class="station-month">Juni</div>
+        <div class="station-flag">🇭🇷</div>
+      </div>
+      <div class="station-body">
+        <div class="station-name">Dubrovnik</div>
+        <div class="station-country-label">Kroatien · 20. Juni 2026</div>
+        <div class="station-note">Die Altstadt bei Nacht ist magisch. Wir haben den ganzen Tag auf der Stadtmauer verbracht und den Sonnenuntergang über der Adria genossen.</div>
+        <div class="station-img-grid">
+          <div class="station-thumb" style="background: linear-gradient(135deg, #c8a882, #b89878);"><span>Foto 1</span></div>
+          <div class="station-thumb" style="background: linear-gradient(135deg, #a8b090, #98a480);"><span>Foto 2</span></div>
+        </div>
+        <div class="station-tags">
+          <span class="tag km">680 km</span>
+          <span class="tag fuel">⛽ 55 L · 10.2 L/100</span>
+          <span class="tag oil">Öl 70%</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="station">
+      <div class="station-date">
+        <div class="station-day">17</div>
+        <div class="station-month">Juni</div>
+        <div class="station-flag">🇸🇮</div>
+      </div>
+      <div class="station-body">
+        <div class="station-name">Ljubljana</div>
+        <div class="station-country-label">Slowenien · 17. Juni 2026</div>
+        <div class="station-note">Erste Nacht im Ausland. Slowenien ist grün und ruhig, die Drachenbrücke beeindruckt.</div>
+        <div class="station-img-grid">
+          <div class="station-thumb" style="background: linear-gradient(135deg, #a8b898, #90a880); grid-column: span 2; height: 120px;"><span>Foto</span></div>
+        </div>
+        <div class="station-tags">
+          <span class="tag km">850 km</span>
+          <span class="tag fuel">⛽ 68 L · 11.3 L/100</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="station">
+      <div class="station-date">
+        <div class="station-day">15</div>
+        <div class="station-month">Juni</div>
+        <div class="station-flag">🇩🇪</div>
+      </div>
+      <div class="station-body">
+        <div class="station-name">Hamburg</div>
+        <div class="station-country-label">Deutschland · 15. Juni 2026</div>
+        <div class="station-note">Losgefahren bei Sonnenaufgang. Der Bulli schnurrt, die Vorfreude ist riesig.</div>
+        <div class="station-tags">
+          <span class="tag km">Startpunkt</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">Dirk & Lisa · Sommer 2026 · 🚐</div>
+</div>
+
+<div class="mockup-divider" style="padding-bottom: 60px;">
+  <p style="color: #aaa;">— Ende der Vorschläge —</p>
+</div>
+
+</body>
+</html>
